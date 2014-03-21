@@ -22,7 +22,6 @@ const (
 const (
 	DefaultParallelism = 1
 	DefaultBatchSize   = 1000
-	Version            = "0.1"
 )
 
 func WriteFrame(semaphore, resultChan chan int, writer framestore.DataFrameWriter, frame *dataframe.DataFrame) {
