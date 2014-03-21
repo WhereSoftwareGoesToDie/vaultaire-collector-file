@@ -1,0 +1,15 @@
+language: go
+
+go:
+  - 1.2
+
+install:
+  - ./bin/install_deps.sh
+  - go get
+
+env:
+  - PATH=$GOPATH/bin:$PATH
+
+script:
+  - sudo cp /home/travis/gopath/bin/protoc-gen-go /usr/local/bin
+  - make install
