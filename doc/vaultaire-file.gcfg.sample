@@ -1,0 +1,54 @@
+# Configuration file for vaultaire-collector-nagios.
+# 
+# This file is in gcfg format[0]. It probably works like you'd expect 
+# a config file to work.
+# 
+# [0] https://code.google.com/p/gcfg/
+
+[general]
+# Number of threads/goroutines to use for processing/writing. Note that
+# this will not affect the number of CPU cores used unless GOMAXPROCS is
+# set (to something >1). 
+parallelism=1
+
+# Currently supported backends:
+#
+#  - file (DataFrame backend)
+#  - vaultaire 
+storagebackend=file
+
+# Will be created if it doesn't exist.
+logfile=/var/log/vaultaire/nagios-collector.log
+
+# Available log levels (case-insensitive):
+#
+# - emerg
+# - alert
+# - crit
+# - err
+# - warning
+# - notice
+# - info
+# - debug
+#
+# These correspond to the appropriate syslog log levels.
+loglevel=debug
+
+# Die if we've been running for longer than this (milliseconds).
+timeout=10000
+
+[file]
+dataframefile=vaultaire_nagios_out.pb
+
+[vaultaire]
+# host running chateau
+broker="tcp://localhost:5560"
+# seconds to wait before writing a batch of frames
+batchperiod=0.1
+# vaultaire origin to use for generated bursts
+origin="nagios/perfdata"
+# enable libmarquise's internal debugging output
+marquisedebug=false
+# telemetry endpoint (a Chateau broker should be running here)
+# empty string to disable telemetry
+telemetryendpoint=""
