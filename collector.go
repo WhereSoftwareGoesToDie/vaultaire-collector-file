@@ -16,6 +16,10 @@ import (
 )
 
 const (
+	Version = "1.0.0"
+)
+
+const (
 	DefaultParallelism = 1
 	DefaultBatchSize   = 1000
 	Version            = "0.1"
