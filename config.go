@@ -14,10 +14,10 @@ type Config struct {
 		LogLevel       string
 	}
 	Vaultaire struct {
-		Broker        string
-		BatchPeriod   float64
-		Origin        string
-		MarquiseDebug bool
+		Broker            string
+		BatchPeriod       float64
+		Origin            string
+		MarquiseDebug     bool
 		TelemetryEndpoint string
 	}
 	File struct {
