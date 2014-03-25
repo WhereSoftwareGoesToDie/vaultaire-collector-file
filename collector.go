@@ -39,7 +39,7 @@ func WriteFrame(semaphore, resultChan chan int, writer framestore.DataFrameWrite
 }
 
 func main() {
-	rcfile := flag.String("cfg", "/etc/bletchley/framestore.gcfg", "Path to configuration file. This file should be in gcfg[0] format. [0] https://code.google.com/p/gcfg/")
+	rcfile := flag.String("cfg", "/etc/bletchley/vaultaire-file.gcfg", "Path to configuration file. This file should be in gcfg[0] format. [0] https://code.google.com/p/gcfg/")
 	version := flag.Bool("version", false, "Print version number and then exit.")
 
 	flag.Usage = func() {
