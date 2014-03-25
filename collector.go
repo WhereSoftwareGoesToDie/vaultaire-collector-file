@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/anchor/dataframe"
-	"github.com/anchor/bletchley/framestore"
-	"github.com/anchor/bletchley/framestore/vaultaire"
+	"github.com/anchor/dataframe/framestore"
+	"github.com/anchor/dataframe/framestore/vaultaire"
 )
 
 const (
