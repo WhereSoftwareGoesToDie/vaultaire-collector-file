@@ -4,15 +4,16 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"github.com/anchor/bletchley/dataframe"
-	"github.com/anchor/bletchley/framestore"
-	"github.com/anchor/bletchley/framestore/vaultaire"
 	"io"
 	"log"
 	"os"
 	"os/user"
 	"path/filepath"
 	"time"
+
+	"github.com/anchor/dataframe"
+	"github.com/anchor/bletchley/framestore"
+	"github.com/anchor/bletchley/framestore/vaultaire"
 )
 
 const (
