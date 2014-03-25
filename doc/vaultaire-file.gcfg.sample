@@ -1,4 +1,4 @@
-# Configuration file for vaultaire-collector-nagios.
+# Configuration file for vaultaire-collector-file.
 # 
 # This file is in gcfg format[0]. It probably works like you'd expect 
 # a config file to work.
@@ -15,10 +15,10 @@ parallelism=1
 #
 #  - file (DataFrame backend)
 #  - vaultaire 
-storagebackend=file
+storagebackend=vaultaire
 
 # Will be created if it doesn't exist.
-logfile=/var/log/vaultaire/nagios-collector.log
+logfile=/var/log/vaultaire/file-collector.log
 
 # Available log levels (case-insensitive):
 #
@@ -38,7 +38,7 @@ loglevel=debug
 timeout=10000
 
 [file]
-dataframefile=vaultaire_nagios_out.pb
+dataframefile=vaultaire_file_out.pb
 
 [vaultaire]
 # host running chateau
